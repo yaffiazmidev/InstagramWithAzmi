@@ -14,4 +14,15 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
     }
+    
+    @IBAction func didClickSignInButton(_ sender: UIButton) {
+        let nav = UINavigationController(rootViewController: HomeViewController())
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)
+    }
+    @IBAction func didClickSignUpButton(_ sender: UIButton) {
+        let vc = RegisterViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
 }
